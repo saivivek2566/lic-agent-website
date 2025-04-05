@@ -48,8 +48,8 @@
     padding: 100px 20px;
     background: linear-gradient(135deg, #004aad, #00bfff);
     color: white;
-    max-width: 100%;
-  width: 90vw;
+
+  
 
   }
   
@@ -399,26 +399,101 @@
     padding: 15px 0;
     margin-top: 50px;
   }
-img {
+  /* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f9fc;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+/* General container layout */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.hero img {
   max-width: 100%;
   height: auto;
-  display: block;
+  border-radius: 12px;
 }
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
 
+.hero-content {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+/* Buttons */
+button, .btn {
+  background-color: #004aad;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #003080;
+}
+
+/* Footer */
+footer {
+  background-color: #004aad;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
   .hero {
     flex-direction: column;
     text-align: center;
   }
 
+  .hero-content {
+    padding: 10px;
+  }
+
   .calculator-container {
-    padding: 20px 10px;
+    padding: 30px 15px;
   }
 }
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  button, .btn {
+    width: 100%;
+  }
+}
+
 
 
   
