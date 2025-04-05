@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Policy Calculator</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">LIC Agent</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="plans.html">Plans</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="comparer.html">Comparer</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about-agent.html" class="about-link">Know More About Our Agent</a>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1 data-aos="fade-down">LIC Policy Calculator</h1>
+    <p data-aos="fade-up">Estimate your policy maturity amount instantly!</p>
+  </section>
+
+  <section class="calculator-container" data-aos="fade-up">
+    <form id="calc-form">
+      <label>Age: <input type="number" id="age" required></label>
+      <label>Monthly Premium (₹): <input type="number" id="premium" required></label>
+      <label>Policy Term (Years): <input type="number" id="term" required></label>
+      <label>Expected Interest Rate (%): <input type="number" id="rate" value="6.5" step="0.1" required></label>
+      <button type="submit" class="btn">Estimate</button>
+    </form>
+    <div id="result" class="result-box" data-aos="zoom-in"></div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 LIC Agent | Made by Vivek</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
